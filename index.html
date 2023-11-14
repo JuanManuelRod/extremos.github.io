@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Matemática</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Hace que la página se extienda al menos al 100% de la altura de la ventana */
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        main {
+            flex: 1; /* Hace que el contenido principal se expanda y ocupe el espacio restante */
+            margin: 20px;
+        }
+
+        .titulo {
+            cursor: pointer;
+            border-bottom: 2px solid #333;
+            margin-bottom: 10px;
+            background-color: #f4f4f4;
+            padding: 5px;
+        }
+
+        .contenido {
+            display: none;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ejercicios de aplicación para extremos <br> en dos variables</h1>
+    </header>
+
+    <main>
+        <div class="titulo" onclick="mostrarOcultar('titulo1')">Ejercicio 1 (Extemos relativos)</div>
+        <div class="contenido" id="titulo1">Una empresa que fabrica dos tipos de calzado deportivo: las zapatillas de correr y las zapatillas de crossfit. 
+<br>
+Los ingresos totales de x unidades de zapatillas para correr e y unidades de entrenadores cruzados viene dada por R(x,y)= −5x^(2) −8y^(2) −2xy+ 42x + 102y, donde x como  y están en miles de unidades. <br> Halle los valores de x y de y para maximizar los ingresos totales.</div>
+	<br>
+        <div class="titulo" onclick="mostrarOcultar('titulo2')">Ejercicio 2 (Extremos condicionados)</div>
+
+        <div class="contenido" id="titulo2">Se desea construir una caja rectangular con una base cuadrada y sin tapa, utilizando 12 metros cuadrados de cartón. ¿Cuáles deben ser las dimensiones de la caja para que su volumen sea máximo?
+<br>
+Para resolver este problema, se puede plantear la función objetivo como el volumen de la caja, que depende de la longitud del lado de la base (x) y de la altura (y)</div>
+<br>
+
+        <div class="titulo" onclick="mostrarOcultar('titulo3')">Ejercicio 3 (Extremos absolutos)</div>
+        <div class="contenido" id="titulo3"><p>Imaginemos que eres el gerente de una fábrica que produce un determinado artículo. La función z = x^(2) + y^(2) + 4x - 4y + 10 representa el costo total de producción del artículo donde x es la cantidad de horas de mano de obra e y es la cantidad de horas de uso de maquinaria.
+<br>
+Sin embargo, debido a restricciones de espacio y equipo, la fábrica tiene un límite en la cantidad de trabajo que puede realizar. La restricción (x-4)^2+(y-6)^2 < 9 que describe el área disponible para la producción, representando un círculo de radio = 3 unidades.
+<br>
+El problema es minimizar el costo total de producción sujeto a la restricción de espacio.
+          </p>
+</div>
+    </main>
+
+    <footer>
+        <p>Autor: Prof. Juan Manuel Rodriguez </p>
+        <p>Fecha de Creación: 16 de agosto de 2013</p>
+    </footer>
+
+    <script>
+        function mostrarOcultar(id) {
+            var contenido = document.getElementById(id);
+            if (contenido.style.display === "none") {
+                contenido.style.display = "block";
+            } else {
+                contenido.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
